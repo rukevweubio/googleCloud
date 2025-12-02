@@ -83,6 +83,9 @@ resource "google_compute_instance" "vm" {
     subnetwork = google_compute_subnetwork.public_subnet.id
     access_config {} # Public IP
   }
+   metadata = {
+    ssh-keys = "debian:${file("~/.ssh/id_ed25519.pub")}"
+  
 }
-
+}
 

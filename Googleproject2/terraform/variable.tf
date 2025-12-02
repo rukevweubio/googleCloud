@@ -1,4 +1,6 @@
-variable "project" {}
+variable "project" {
+  default = "kkgcplabs01-017"
+}
 
 variable "region" {
   description = "Region where resources will be deployed"
